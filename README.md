@@ -26,7 +26,7 @@ If a service fails to start post-reboot:
  * If unresolved, it automatically triggers an Ansible rollback playbook to restore the previous stable state.
 ## 🛠️ Tech Stack
  * **Orchestration:** Python 3.11+, LangGraph
- * **LLM:** GPT-4o / Claude 3.5 Sonnet
+ * **LLM:** Qwen2.5-7B-Instruct 
  * **Automation:** Ansible Core
  * **Infrastructure:** Azure (Linux VMs), RHEL/Ubuntu
  * **Monitoring Integration:** (Optional) Prometheus/Grafana API
