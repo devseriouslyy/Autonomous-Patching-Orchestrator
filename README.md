@@ -29,7 +29,15 @@ If a service fails to start post-reboot:
  * **LLM:** Qwen2.5-7B-Instruct 
  * **Automation:** Ansible Core
  * **Infrastructure:** Azure (Linux VMs), RHEL/Ubuntu
- * **Monitoring Integration:** (Optional) Prometheus/Grafana API
+ * **Infrastructure detailed** 2 Azure VMs -
+ * VM1 (Ubuntu 22.04, Ollama installed, Qwen2.5-7B-Instruct, Port 11434 open to VM2 only (NSG rule in Azure)) 
+ * VM2 (Ubuntu 22.04
+Python 3.11+ with requests, langchain (optional), pyyaml
+Ansible installed (pip install ansible or apt)
+SSH key pair configured for all target VMs
+Your APO agent code — a Python script/service that orchestrates the workflow
+Ansible playbooks: pre_patch_checks.yml, patch.yml, post_patch_validate.yml, rollback.yml
+An Ansible inventory file listing your target hosts
 ## 📖 How it Works
  1. **Discovery:** Agent queries the inventory to identify pending patches.
  2. **Reasoning:** Agent executes a "Pre-Check" tool (Ansible) and evaluates the JSON output.
