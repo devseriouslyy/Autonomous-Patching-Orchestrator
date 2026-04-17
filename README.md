@@ -1,4 +1,3 @@
-# Autonomous-Patching-Orchestrator
 
 # Autonomous Patching Orchestrator (APO)
 ### Agentic AI + Ansible for Enterprise Linux Fleet Management
